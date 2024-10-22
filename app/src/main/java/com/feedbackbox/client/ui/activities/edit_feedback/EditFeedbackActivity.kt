@@ -25,6 +25,7 @@ import com.feedbackbox.client.ui.custom_components.showPopUpQuestion
 import com.feedbackbox.client.ui.viewmodels.edit_feedback.EditFeedbackViewModel
 import com.feedbackbox.client.ui.viewmodels.edit_feedback.EditFeedbackViewModelFactory
 import com.feedbackbox.client.utils.Extensions
+import com.feedbackbox.client.utils.Extensions.Companion.capitalizeFirstLetter
 
 class EditFeedbackActivity : AppCompatActivity() {
     private val TAG = EditFeedbackActivity::class.java.simpleName
@@ -153,7 +154,7 @@ class EditFeedbackActivity : AppCompatActivity() {
         binding.idvStatusFeedback.apply {
             setTitle(getString(R.string.idvTxtTypeTitle))
             setData(Constants.ITEM.getListItemDropdown())
-            setText(deliveredFeedback.type)
+            setText(deliveredFeedback.type.capitalizeFirstLetter())
             setListener(object: InputDropdownView.DropdownListener{
                 override fun onDropdownClicked() {
                     setNormal()
@@ -185,9 +186,11 @@ class EditFeedbackActivity : AppCompatActivity() {
             setTitle(getString(R.string.itvTxtContentTitle))
             setTextHelper(getString(R.string.itvTxtContentHint))
             setInputType(InputTextView.INPUT_TYPE.MULTILINE)
+            setText(deliveredFeedback.contents)
         }
 
         binding.btnDelete.apply {
+            visibility = View.VISIBLE
             setOnClickListener {
                 setLayoutForPopUp(true)
                 showPopUpQuestion(
@@ -211,6 +214,7 @@ class EditFeedbackActivity : AppCompatActivity() {
         }
 
         binding.btnUpdate.apply {
+            visibility = View.VISIBLE
             setOnClickListener {
                 retrievedName = binding.itvName.getText()
                 retrievedContent = binding.itvContentFeedback.getText()

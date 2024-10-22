@@ -25,5 +25,13 @@ class Extensions {
             // Menggabungkan semua komponen
             return "$prefix-$currentTime-$randomNumber"
         }
+
+        fun String.capitalizeFirstLetter(): String {
+            return if (this.isNotEmpty()) {
+                this[0].uppercaseChar() + this.substring(1).lowercase()
+            } else {
+                this
+            }
+        }
     }
 }
