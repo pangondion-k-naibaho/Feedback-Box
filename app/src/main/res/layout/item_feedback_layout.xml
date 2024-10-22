@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="8dp"
+    android:layout_marginTop="2dp">
+
+    <ImageView
+        android:id="@+id/ivCircle1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_electriceel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/ivCircle1"
+        app:layout_constraintEnd_toEndOf="@id/ivCircle1"
+        app:layout_constraintTop_toBottomOf="@+id/ivCircle1"
+        app:layout_constraintBottom_toTopOf="@+id/ivCircle2"
+        android:layout_marginVertical="5dp"
+        android:background="@color/electric_eel"/>
+
+    <ImageView
+        android:id="@+id/ivCircle2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_circle_electriceel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivCircle1"
+        app:layout_constraintTop_toTopOf="@+id/ivCircle1"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCircle1"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/redhatdisplay_medium"
+        android:textSize="22sp"
+        android:textColor="@color/flax_flower_blue"
+        android:text="@string/tvSampleName"/>
+
+    <TextView
+        android:id="@+id/tvCoS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditFeedback"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:lines="3"
+        android:ellipsize="end"
+        android:fontFamily="@font/redhatdisplay_regular"
+        android:textSize="16sp"
+        android:textColor="@color/puppeteers"
+        android:text="@string/tvSampleFeedback"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnEditFeedback"
+        android:layout_width="35dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCoS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/droplet"
+        android:src="@drawable/ic_edit_white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

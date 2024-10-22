@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Feedback Box</string>
+    <string name="tvDummyTitle">Dummy Title</string>
+    <string name="tvDummyDropdownOption">Dummy Option</string>
+    <string name="tvInputTextError">This form is required</string>
+    <string name="menu_add_feedback">Add Feedback</string>
+    <string name="tvSampleName">Sample Name</string>
+    <string name="tvSampleFeedback">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate justo vitae lectus fringilla, a interdum enim tempor. Vivamus luctus eros vel turpis pretium, id tristique mi dapibus.</string>
+    <string name="tvEmptyFeedback">No feedbacks available. Please create a feedback.</string>
+    <string name="tvAddEditFeedbackTitle">Fill this form below</string>
+    <string name="btnTxtAddFeedback">Add Feedback</string>
+    <string name="btnTxtDeleteFeedback">Delete</string>
+    <string name="btnTxtUpdateFeedback">Save Update</string>
+    <string name="itvTxtNameTitle">Name</string>
+    <string name="itvTxtNameHint">Dion Kurniawan</string>
+    <string name="idvTxtTypeTitle">Type Feedback</string>
+    <string name="idvTxtTypeHint">Select Type</string>
+    <string name="itvTxtContentTitle">Content</string>
+    <string name="itvTxtContentHint">I think you should…</string>
+    <string name="popupDummyNotificationTitle">Pop up Notification Title</string>
+    <string name="popupDummyNotificationDesc">This is Pop up Notification Detail</string>
+    <string name="popupDummyQuestionTitle">Pop up Question Title</string>
+    <string name="popupDummyQuestionDesc">This is Pop up Question Detail, isn\'t it?</string>
+    <string name="btnTxtCancel">Cancel</string>
+    <string name="btnTxtYes">Yes</string>
+
+    <string name="popupAddFeedbackSuccessTitle">Success</string>
+    <string name="popupAddFeedbackSuccessDesc">Feedback added successfully</string>
+    <string name="popupAddFeedbackFailTitle">Failed</string>
+    <string name="popupAddFeedbackFailDesc">Feedback couldn\'t be added. Try again later!</string>
+
+</resources>

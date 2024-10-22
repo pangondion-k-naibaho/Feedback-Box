@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Main Content View -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/doctor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAddFeedback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/primary_background"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAddAssetContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarAddFeedback"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingVertical="18dp"
+            android:paddingHorizontal="16dp"
+            android:background="@color/full_transparent">
+
+            <TextView
+                android:id="@+id/tvAddAssetTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="170dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/redhatdisplay_bold"
+                android:textSize="28sp"
+                android:textColor="@color/void_century"
+                android:text="@string/tvAddEditFeedbackTitle"/>
+
+            <com.feedbackbox.client.ui.custom_components.InputTextView
+                android:id="@+id/itvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddAssetTitle"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="5dp"
+                tools:ignore="MissingConstraints"/>
+
+            <com.feedbackbox.client.ui.custom_components.InputDropdownView
+                android:id="@+id/idvStatusFeedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itvName"
+                android:layout_marginTop="18dp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <com.feedbackbox.client.ui.custom_components.InputTextView
+                android:id="@+id/itvContentFeedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idvStatusFeedback"
+                android:layout_marginTop="18dp"
+                android:layout_marginHorizontal="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmitFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="33dp"
+                android:background="@drawable/primary_background"
+                android:paddingVertical="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/redhatdisplay_medium"
+                android:textSize="16sp"
+                android:text="@string/btnTxtAddFeedback"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSave"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="33dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/bg_circular_rectangle_grenadine_white"
+                android:textAllCaps="false"
+                android:textColor="@color/grenadine_pink"
+                android:fontFamily="@font/redhatdisplay_medium"
+                android:textSize="16sp"
+                android:text="@string/btnTxtDeleteFeedback"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/btnDelete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="33dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/primary_background"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/redhatdisplay_medium"
+                android:textSize="16sp"
+                android:text="@string/btnTxtUpdateFeedback"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Loading Layout -->
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Progress indicator or loading animation goes here -->
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/bleu_de_france"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
