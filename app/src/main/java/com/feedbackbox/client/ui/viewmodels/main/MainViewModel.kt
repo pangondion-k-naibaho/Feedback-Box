@@ -17,15 +17,15 @@ class MainViewModel(private val repository: FeedbackRepository): ViewModel() {
     private var _isFail = MutableLiveData<Boolean>()
     val isFail : LiveData<Boolean> = _isFail
 
-    private var _feedbacksResponse = MutableLiveData<List<Feedback>>()
-    val feedbacksResponse : LiveData<List<Feedback>> = _feedbacksResponse
+    private var _feedbacksCollection = MutableLiveData<List<Feedback>>()
+    val feedbacksCollection : LiveData<List<Feedback>> = _feedbacksCollection
 
     fun getAllFeedback(){
         _isLoading.value = true
         viewModelScope.launch {
             try {
                 repository.getAllFeedback().observeForever{
-                    _feedbacksResponse.value = it
+                    _feedbacksCollection.value = it
                     _isLoading.value = false
                 }
             }catch (e: Exception){

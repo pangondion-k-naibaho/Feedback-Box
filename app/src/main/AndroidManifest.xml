@@ -14,6 +14,9 @@
         android:theme="@style/Theme.FeedbackBox"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activities.edit_feedback.EditFeedbackActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.add_feedback.AddFeedbackActivity"
             android:exported="false" />
         <activity
