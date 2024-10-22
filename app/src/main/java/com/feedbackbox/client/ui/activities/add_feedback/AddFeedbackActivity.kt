@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.feedbackbox.client.R
 import com.feedbackbox.client.data.Constants.ITEM.Companion.getListItemDropdown
@@ -75,6 +74,7 @@ class AddFeedbackActivity : AppCompatActivity() {
                     listener = object: PopUpNotificationListener{
                         override fun onPopUpClosed() {
                             setLayoutForPopUp(false)
+                            closeOptionsMenu()
                         }
                     }
                 )
@@ -86,6 +86,7 @@ class AddFeedbackActivity : AppCompatActivity() {
                     listener = object: PopUpNotificationListener{
                         override fun onPopUpClosed() {
                             setLayoutForPopUp(false)
+                            closeOptionsMenu()
                             startActivity(MainActivity.newIntent(this@AddFeedbackActivity))
                             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                             finish()
@@ -98,7 +99,7 @@ class AddFeedbackActivity : AppCompatActivity() {
 
     private fun setUpView(){
         binding.btnDelete.visibility = View.GONE
-        binding.btnSave.visibility = View.GONE
+        binding.btnUpdate.visibility = View.GONE
 
         binding.itvName.apply {
             setTitle(getString(R.string.itvTxtNameTitle))

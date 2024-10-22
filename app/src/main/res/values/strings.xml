@@ -29,4 +29,17 @@
     <string name="popupAddFeedbackFailTitle">Failed</string>
     <string name="popupAddFeedbackFailDesc">Feedback couldn\'t be added. Try again later!</string>
 
+    <string name="popupDeleteFeedbackFailTitle">Failed</string>
+    <string name="popupDeleteFeedbackFailDesc">Feedback couldn\'t be deleted. Try again later!</string>
+    <string name="popupDeleteFeedbackSuccessTitle">Success</string>
+    <string name="popupDeleteFeedbackSuccessDesc">Feedback deleted successfully</string>
+
+    <string name="popupDeleteFeedbackTitle">Delete Feedback</string>
+    <string name="popupDeleteFeedbackDesc">Are you sure want to delete this feedback?</string>
+
+    <string name="popupUpdateFeedbackFailTitle">Failed</string>
+    <string name="popupUpdateFeedbackFailDesc">Feedback couldn\'t be updated. Try again later!</string>
+    <string name="popupUpdateFeedbackSuccessTitle">Success</string>
+    <string name="popupUpdateFeedbackSuccessDesc">Feedback updated successfully</string>
+
 </resources>
